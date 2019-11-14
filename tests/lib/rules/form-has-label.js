@@ -7,7 +7,7 @@ var RuleTester = require('eslint').RuleTester;
 
 const errorMessage = 'Each form element must have a programmatically associated label element.';
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

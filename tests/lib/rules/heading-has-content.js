@@ -9,7 +9,7 @@ const errorMessage =
   'Headings must have content and the content must be accessible by a screen reader.';
 
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

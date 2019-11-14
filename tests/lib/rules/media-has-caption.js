@@ -7,7 +7,7 @@ var RuleTester = require('eslint').RuleTester;
 
 const errorMessage = 'Media elements such as <audio> and <video> must have a <track> for captions.';
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

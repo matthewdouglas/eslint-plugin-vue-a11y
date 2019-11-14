@@ -7,7 +7,7 @@ var RuleTester = require('eslint').RuleTester;
 
 const errorMessage = '<iframe> elements must have a unique title property.';
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

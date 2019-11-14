@@ -7,7 +7,7 @@ var RuleTester = require('eslint').RuleTester;
 
 const errorMessage = 'Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby.';
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

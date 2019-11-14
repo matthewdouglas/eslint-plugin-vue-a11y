@@ -6,7 +6,7 @@ var rule = require('../../../lib/rules/no-distracting-elements');
 var RuleTester = require('eslint').RuleTester;
 
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',

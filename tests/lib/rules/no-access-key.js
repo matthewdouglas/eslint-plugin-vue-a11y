@@ -10,7 +10,7 @@ const errorMessage = 'No access key attribute allowed. Inconsistencies ' +
   'and keyboard only users create a11y complications.';
 
 var tester = new RuleTester({
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: 'module',
