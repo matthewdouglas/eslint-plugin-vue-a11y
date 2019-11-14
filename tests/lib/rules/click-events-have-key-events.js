@@ -19,7 +19,15 @@ tester.run('click-events-have-key-events', rule, {
   valid: [
     {
       filename: 'test.vue',
-      code: '<template><a @click="doSth" @keydown="doSth"></a></template>',
+      code: '<template><a href="" @click="doSth"></a></template>',
+    },
+    {
+      filename: 'test.vue',
+      code: '<template><button @click="doSth"></button></template>'
+    },
+    {
+      filename: 'test.vue',
+      code: '<template><span @click="doSth" @keydown="doSth"></span></template>'
     },
     {
       code: `
@@ -36,7 +44,7 @@ tester.run('click-events-have-key-events', rule, {
   invalid: [
     {
       filename: 'test.vue',
-      code: '<template><a @click="doSth"></a></template>',
+      code: '<template><div @click="doSth"></div></template>',
       errors: [{
         message: errorMessage
       }]
